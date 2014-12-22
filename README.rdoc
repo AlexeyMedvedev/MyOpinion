@@ -10,7 +10,7 @@
 Комманда:
 Медведев Алексей, Звонар Роман
 
-Ссылка на схему: http://screencast.com/t/LnQoIJGbyvTD
+Ссылка на схему: http://screencast.com/t/mQ75qmIS 
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
