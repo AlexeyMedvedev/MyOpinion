@@ -38,8 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'devise'
-
 group :test do 
 # RubyBursa
 	gem 'rspec-rails'
