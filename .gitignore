@@ -18,4 +18,4 @@
 # RubyBursa добавляем в файл .gitignore
 config/database.yml
 public/*
-*.swp
+*.swp.idea
