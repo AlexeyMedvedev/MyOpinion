@@ -5,8 +5,6 @@ class CreateEvents < ActiveRecord::Migration
       t.text :adress
       t.string :phone
       t.text :type
-
-      t.timestamps
     end
   end
 end

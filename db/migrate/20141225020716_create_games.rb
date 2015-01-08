@@ -4,8 +4,6 @@ class CreateGames < ActiveRecord::Migration
       t.string :name
       t.string :platform
       t.string :janra
-
-      t.timestamps
     end
   end
 end
