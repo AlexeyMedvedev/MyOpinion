@@ -10,7 +10,11 @@
 Комманда:
 Медведев Алексей, Звонар Роман
 
-Ссылка на схему: http://screencast.com/t/mQ75qmIS 
+Ссылка на схему: http://screencast.com/t/mQ75qmIS
+
+Хероку:
+
+https://leisures.herokuapp.com/
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
