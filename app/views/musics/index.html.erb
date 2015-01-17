@@ -15,8 +15,8 @@
         <td><%= link_to music.name, music_path(music) %></td>
         <td><%= link_to music.singer, music_path(music) %></td>
         <td>
-          <%= link_to 'Edit', edit_music_path(product), :class => 'btn btn-mini' %>
-          <%= link_to 'Destroy', music_path(product), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+          <%= link_to 'Edit', edit_music_path(music), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', music_path(music), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
   <% end %>
