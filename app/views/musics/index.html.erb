@@ -5,6 +5,7 @@
     <th>ID</th>
     <th>Name</th>
     <th>Singer</th>
+    <th>Janra</th>
     <th>Actions</th>
   </tr>
   </thead>
@@ -14,6 +15,7 @@
         <td><%= music.id %></td>
         <td><%= link_to music.name, music_path(music) %></td>
         <td><%= link_to music.singer, music_path(music) %></td>
+        <td><%= link_to music.janra, music_path(music) %></td>
         <td>
           <%= link_to 'Edit', edit_music_path(music), :class => 'btn btn-mini' %>
           <%= link_to 'Destroy', music_path(music), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>

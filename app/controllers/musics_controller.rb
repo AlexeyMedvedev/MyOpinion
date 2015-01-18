@@ -28,12 +28,12 @@ class MusicsController < ApplicationController
   end
 # GET /musics/1/edit
   def edit
-    @music = Music.find(params[:id])
+    @music = Music.find(param.permits[:id])
   end
 # POST /musics
 # POST /musics.json
   def create
-    @music = Music.new(params[:musics])
+    @music = Music.new(params.permit[:musics])
     respond_to do |format|
       if @music.save
         format.html { redirect_to @music, notice: 'Music was successfully created.' }
