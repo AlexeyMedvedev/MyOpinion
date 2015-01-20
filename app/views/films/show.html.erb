@@ -1,0 +1,22 @@
+<h1>Film</h1>
+<p>
+  <b>Name</b><br>
+  <%= @film.name %>
+</p>
+<p>
+  <b>Directed</b><br>
+  <%= @film.directed %>
+</p>
+<p>
+  <b>Janra</b><br>
+  <%= @film.janra %>
+</p>
+<p>
+  <b>Length</b><br>
+  <%= @film.length %>
+</p>
+<div class="form-actions">
+  <%= link_to 'Back', film_path, :class => 'btn' %>
+  <%= link_to 'Edit', edit_film_path(@film), :class => 'btn' %>
+  <%= link_to 'Delete', film_path(@film), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
