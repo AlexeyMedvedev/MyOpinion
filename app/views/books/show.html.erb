@@ -1,0 +1,18 @@
+<h1>Book</h1>
+<p>
+  <b>Name</b><br>
+  <%= @book.name %>
+</p>
+<p>
+  <b>Author</b><br>
+  <%= @book.author %>
+</p>
+<p>
+  <b>Janra</b><br>
+  <%= @book.janra %>
+</p>
+<div class="form-actions">
+  <%= link_to 'Back', book_path, :class => 'btn' %>
+  <%= link_to 'Edit', edit_book_path(@book), :class => 'btn' %>
+  <%= link_to 'Delete', book_path(@book), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
