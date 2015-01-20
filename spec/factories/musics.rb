@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :music do
+  factory :musics do
     name "MyString"
     singer "MyText"
     janra "MyString"

@@ -1,0 +1,18 @@
+<h1>Music</h1>
+<p>
+  <b>Name</b><br>
+  <%= @music.name %>
+</p>
+<p>
+  <b>Singer</b><br>
+  <%= @music.singer %>
+</p>
+<p>
+  <b>Janra</b><br>
+  <%= @music.janra %>
+</p>
+<div class="form-actions">
+  <%= link_to 'Back', music_path, :class => 'btn' %>
+  <%= link_to 'Edit', edit_music_path(@music), :class => 'btn' %>
+  <%= link_to 'Delete', music_path(@music), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

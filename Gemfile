@@ -39,14 +39,19 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
+gem 'simple_form'
 
-group :test do 
+group :test do
 # RubyBursa
 	gem 'rspec-rails'
 	gem 'database_cleaner'
 	gem 'shoulda-matchers'
 	gem 'webmock'
 	gem 'factory_girl_rails'
-	gem 'faker'	
+	gem 'faker'
+	gem 'rails_layout'
 end
 

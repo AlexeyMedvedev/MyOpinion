@@ -1,0 +1,27 @@
+<h1>Musics</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Singer</th>
+    <th>Janra</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @musics.each do |music| %>
+      <tr>
+        <td><%= music.id %></td>
+        <td><%= link_to music.name, music_path(music) %></td>
+        <td><%= link_to music.singer, music_path(music) %></td>
+        <td><%= link_to music.janra, music_path(music) %></td>
+        <td>
+          <%= link_to 'Edit', edit_music_path(music), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', music_path(music), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to 'New', new_music_path, :class => 'btn btn-primary' %>
