@@ -1,0 +1,18 @@
+<h1>Food</h1>
+<p>
+  <b>Name</b><br>
+  <%= @food.name %>
+</p>
+<p>
+  <b>Adress</b><br>
+  <%= @food.adress %>
+</p>
+<p>
+  <b>Phone</b><br>
+  <%= @food.phone %>
+</p>
+<div class="form-actions">
+  <%= link_to 'Back', food_path, :class => 'btn' %>
+  <%= link_to 'Edit', edit_food_path(@food), :class => 'btn' %>
+  <%= link_to 'Delete', food_path(@food), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
