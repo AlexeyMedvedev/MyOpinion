@@ -5,7 +5,7 @@ RSpec.describe Food, :type => :model do
     expect(FactoryGirl.build(:food)).to be_valid
   end
 
-  describe Game, :type => :model do
+  describe Music, :type => :model do
     it {should have_many(:added_items)}
   end
 end

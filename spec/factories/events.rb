@@ -3,7 +3,7 @@ FactoryGirl.define do
     name "MyString"
     adress "MyText"
     phone "MyString"
-    type "MyText"
+    janra "MyText"
   end
 
 end
