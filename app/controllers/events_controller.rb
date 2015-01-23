@@ -33,7 +33,7 @@ class EventsController < ApplicationController
 # POST /events
 # POST /events.json
   def create
-    @event = Event.new(params.require(:event).permit(:name, :adress, :phone, :type))
+    @event = Event.new(params.require(:event).permit(:name, :adress, :phone, :janra))
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'event was successfully created.' }
@@ -49,7 +49,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     respond_to do |format|
-      if @event.update_attributes(params.require(:event).permit(:name, :adress, :phone, :type))
+      if @event.update_attributes(params.require(:event).permit(:name, :adress, :phone, :janra))
         format.html { redirect_to @event, notice: 'event was successfully updated.' }
         format.json { head :no_content }
       else
