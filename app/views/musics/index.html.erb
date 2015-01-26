@@ -1,27 +1,36 @@
-<h1>Musics</h1>
+<%- model_class = Music -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
 <table class="table table-striped">
   <thead>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Singer</th>
-    <th>Janra</th>
-    <th>Actions</th>
-  </tr>
+    <tr>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:singer) %></th>
+      <th><%= model_class.human_attribute_name(:janra) %></th>
+            <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
   </thead>
   <tbody>
-  <% @musics.each do |music| %>
+    <% @musics.each do |music| %>
       <tr>
-        <td><%= music.id %></td>
         <td><%= link_to music.name, music_path(music) %></td>
-        <td><%= link_to music.singer, music_path(music) %></td>
-        <td><%= link_to music.janra, music_path(music) %></td>
-        <td>
-          <%= link_to 'Edit', edit_music_path(music), :class => 'btn btn-mini' %>
-          <%= link_to 'Destroy', music_path(music), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        <td><%= music.singer %></td>
+        <td><%= music.janra %></td>
+                <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_music_path(music), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      music_path(music),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
 </table>
-<%= link_to 'New', new_music_path, :class => 'btn btn-primary' %>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_music_path,
+            :class => 'btn btn-primary' %>
