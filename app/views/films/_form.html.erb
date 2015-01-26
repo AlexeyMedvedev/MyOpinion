@@ -1,0 +1,14 @@
+<%= simple_form_for @film, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@film[:name]) %>
+  <%= f.input :directed %>
+  <%= error_span(@film[:directed]) %>
+  <%= f.input :janra %>
+  <%= error_span(@film[:janra]) %>
+  <%= f.input :length %>
+  <%= error_span(@film[:length]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                films_path, :class => 'btn btn-default' %>
+<% end %>

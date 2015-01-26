@@ -5,7 +5,7 @@ RSpec.describe Film, :type => :model do
     expect(FactoryGirl.build(:film)).to be_valid
   end
 
-  describe Game, :type => :model do
+  describe Film, :type => :model do
     it {should have_many(:added_items)}
   end
 end

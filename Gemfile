@@ -43,6 +43,7 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'simple_form'
+gem 'disqus'
 
 group :test do
 # RubyBursa
